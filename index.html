@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Dieta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Dieta</h1>
+        <form id="dietForm">
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="biotipo">Biotipo:</label>
+                <select id="biotipo">
+                    <option value="ectomorfo">Ectomorfo</option>
+                    <option value="mesomorfo">Mesomorfo</option>
+                    <option value="endomorfo">Endomorfo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" required>
+            </div>
+
+            <div class="form-group">
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" required>
+            </div>
+
+            <div class="form-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" required>
+            </div>
+
+            <div class="form-group">
+                <label for="percentualGordura">Percentual de Gordura (%):</label>
+                <input type="number" id="percentualGordura" required>
+            </div>
+
+            <!-- Aqui está a substituição para Circunferência do Braço -->
+            <div class="form-group">
+                <label for="medidaBraco">Medida do Braço (cm):</label>
+                <input type="number" id="medidaBraco" required>
+            </div>            
+
+            <div class="form-group">
+                <label for="medidaCintura">Medida da Cintura (cm):</label>
+                <input type="number" id="medidaCintura" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medidaQuadril">Medida do Quadril (cm):</label>
+                <input type="number" id="medidaQuadril" required>
+            </div>
+
+            <div class="form-group">
+                <label for="objetivo">Objetivo:</label>
+                <select id="objetivo">
+                    <option value="perder">Perder Peso</option>
+                    <option value="manter">Manter Peso</option>
+                    <option value="ganhar">Ganhar Massa</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Intensidade:</label>
+                <input type="radio" name="intensidade" value="sedentario" checked> Sedentário
+                <input type="radio" name="intensidade" value="leve"> Leve
+                <input type="radio" name="intensidade" value="moderado"> Moderado
+                <input type="radio" name="intensidade" value="atleta"> Atleta
+            </div>
+
+            <div class="form-group">
+                <label for="proteinaPorKg">Proteína por kg de peso total (g):</label>
+                <input type="range" id="proteinaPorKg" min="0.0" max="5.0" step="0.1" value="2.2" oninput="document.getElementById('proteinaValue').innerText = this.value + ' g'">
+                <span id="proteinaValue">2.2 g</span>
+            </div>
+
+            <div class="form-group">
+                <label for="gorduraPorKg">Gordura por kg de peso total (g):</label>
+                <input type="range" id="gorduraPorKg" min="0.0" max="5.0" step="0.1" value="1.0" oninput="document.getElementById('gorduraValue').innerText = this.value + ' g'">
+                <span id="gorduraValue">1.0 g</span>
+            </div>
+
+            <button type="button" id="calcular">Calcular</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <h2>Resultados:</h2>
+            <p id="resultadoMassaMagra"></p>
+            <p id="resultadoMassaGorda"></p>
+            <p id="resultadoTMB"></p>
+            <p id="resultadoCaloriasDescanso"></p>
+            <p id="resultadoCaloriasTreino"></p>
+            <p id="resultadoCaloriasCardio"></p>
+            <p id="resultadoCaloriasTreinoCardio"></p>
+            <p id="resultadoProteinas"></p>
+            <p id="resultadoGorduras"></p>
+            <p id="resultadoCarboidratosDescanso"></p>
+            <p id="resultadoCarboidratosTreino"></p>
+            <p id="resultadoCarboidratosCardio"></p>
+            <p id="resultadoCarboidratosTreinoCardio"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
