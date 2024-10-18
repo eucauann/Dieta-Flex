@@ -1,5 +1,5 @@
 # Calculadora de Dieta
-
+https://golden-alpaca-b1fd95.netlify.app
 ## Visão Geral
 
 A Calculadora de Dieta é uma aplicação web que ajuda os usuários a calcular suas necessidades nutricionais com base em diversos parâmetros, como sexo, idade, altura, peso e nível de atividade física. A aplicação permite que os usuários ajustem a ingestão de proteínas e gorduras através de controles deslizantes e fornece resultados detalhados sobre massa magra, massa gorda e calorias necessárias.
